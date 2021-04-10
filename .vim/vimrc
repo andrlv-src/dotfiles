@@ -1,0 +1,142 @@
+set nocompatible
+
+" -------------------------------------------------------
+" Plugin settings
+" -------------------------------------------------------
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'preservim/nerdtree'
+
+" Snippets
+Plugin 'SirVer/ultisnips' 
+Plugin 'honza/vim-snippets' 
+
+" Themes
+Plugin 'AlessandroYorba/Alduin'
+Plugin 'Badacadabra/vim-archery'
+Plugin 'whatyouhide/vim-gotham'
+Plugin 'lifepillar/vim-solarized8'
+Plugin 'NLKNguyen/papercolor-theme'
+Plugin 'gruvbox-community/gruvbox'
+
+" Autocomplete plugin
+Plugin 'vim-scripts/AutoComplPop'
+
+" Airline plugin
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+" -------------------------------------------------------
+" Basic settings 
+" -------------------------------------------------------
+
+set relativenumber 
+set number
+set smartindent
+set nowrap
+set incsearch
+set ignorecase
+set smartcase
+set scrolloff=8
+set splitbelow
+set splitright
+set wildmenu
+set expandtab
+set noshowmode
+set cursorline
+set hlsearch
+syntax on
+
+cabbrev help tab help
+
+highlight ColorColumn ctermbg=red
+call matchadd('ColorColumn', '\%81v', 100)
+set colorcolumn=81
+
+" -------------------------------------------------------
+"  Keymaps 
+" -------------------------------------------------------
+
+let mapleader = " "
+nnoremap <F4> :sh<CR>
+nnoremap <F5> :w<CR> :make && ./a.out<CR>
+"nnoremap <CR> o<Esc>
+nnoremap <silent><leader>t :vert :term<CR>
+nnoremap <silent><leader>- :vertical resize -5<CR>
+nnoremap <silent><leader>= :vertical resize +5<CR>
+nnoremap <silent><leader>hh :vertical resize +10<CR>
+nnoremap <silent><leader>ll :vertical resize -10<CR>
+nnoremap <leader>h <C-w>h
+nnoremap <leader>l <C-w>l
+nnoremap <leader>ex :40Vexplore<CR>
+nnoremap <silent><leader>rh :h <C-R>=expand("<cword>")<CR><CR>
+nnoremap <silent><leader>rc :tabnew $MYVIMRC<CR>
+nnoremap <silent><leader>rl :so $MYVIMRC<CR>
+nnoremap <leader>qq :qa<CR>
+vnoremap <leader>c "*y
+nnoremap <leader>p "*p
+nnoremap <leader>8 :noh<CR>
+inoremap jj <Esc>
+
+" -------------------------------------------------------
+" Autoload NERDTree
+" -------------------------------------------------------
+
+" autocmd VimEnter * NERDTree
+" autocmd VimEnter * wincmd p
+
+" -------------------------------------------------------
+" Color and statusline theme
+" -------------------------------------------------------
+
+if (has("termguicolors"))
+        let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+        let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+        set termguicolors
+endif
+
+colorscheme solarized8 
+set background=dark
+" hi Normal guibg=NONE ctermbg=NONE
+
+let g:airline_theme='archery'
+let g:airline_powerline_fonts = 1
+" let g:airline_theme='papercolor'
+" AirlineTheme base16_gruvbox_dark_hard
+" ArilineTheme base16_codeschool
+
+" -------------------------------------------------------
+" Custom status line
+" -------------------------------------------------------
+
+
+"set statusline
+"set laststatus=2
+"set statusline=
+"set statusline+=%#DiffAdd#%{(mode()=='n')?'\ \ NORMAL\ ':''}
+"set statusline+=%#DiffChange#%{(mode()=='i')?'\ \ INSERT\ ':''}
+"set statusline+=%#DiffDelete#%{(mode()=='r')?'\ \ RPLACE\ ':''}
+"set statusline+=%#Cursor#%{(mode()=='v')?'\ \ VISUAL\ ':''}
+"set statusline+=\ %n\                   " buffer number
+"set statusline+=%#Visual#               " colour
+"set statusline+=%{&paste?'\ PASTE\ ':''}
+"set statusline+=%{&spell?'\ SPELL\ ':''}
+"set statusline+=%#CursorIM#             " colour
+"set statusline+=%R                      " readonly flag
+"set statusline+=%#Cursor#               " colour
+"set statusline+=%#CursorLine#           " colour
+"set statusline+=\ %t\%m                 " short file name
+"set statusline+=%=                      " right align
+"set statusline+=%#CursorLine#           " colour
+"set statusline+=\ %Y\                   " file type
+"set statusline+=%#CursorIM#             " colour
+"set statusline+=\ %3l:%-2c\             " line + column
+"set statusline+=%#Cursor#               " colour
+"set statusline+=\ %3p%%\                " percentage
+

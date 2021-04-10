@@ -1,0 +1,14 @@
+[user]
+	name = 
+	email = 
+[core]
+	editor = vim
+[color]
+	ui = auto
+[alias]
+        hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+        br = branch
+        lo = log --oneline
+        co = checkout
+        st = status
+        cm = commit

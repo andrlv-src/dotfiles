@@ -1,0 +1,23 @@
+# aliases
+
+# console aliases
+alias :q='exit'
+alias ls='ls --color=auto'
+alias la='ls -a'
+alias li='ls -li'
+alias ll='ls -alF'
+alias l='ls -CF'
+alias %=''
+
+# pacman aliases
+alias update='sudo pacman-mirrors'
+alias upgrade='sudo pacman -Syu'
+alias installed='pacman -Qqe'
+alias installed-save='echo $(date +"%d.%m.%Y") > installed.lst; installed >> installed.lst'
+
+# vim aliases for easy edit configs
+alias via='vim ~/.zsh/aliases'
+alias viz='vim ~/.zshrc'
+alias allist='cat ~/.zsh/aliases'
+
+alias grep='grep --color=auto'
