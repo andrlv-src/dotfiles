@@ -38,7 +38,6 @@ filetype plugin indent on    " required
 
 set relativenumber 
 set number
-set smartindent
 set nowrap
 set incsearch
 set ignorecase
@@ -47,10 +46,15 @@ set scrolloff=8
 set splitbelow
 set splitright
 set wildmenu
-set expandtab
 set noshowmode
 set cursorline
 set hlsearch
+
+set tabstop=8
+set shiftwidth=8
+set expandtab
+set smartindent
+set smarttab
 syntax on
 
 cabbrev help tab help
