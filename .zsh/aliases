@@ -1,5 +1,6 @@
 # aliases
 
+alias rr='ranger'
 # console aliases
 alias :q='exit'
 alias ls='ls --color=auto'
