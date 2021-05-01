@@ -16,8 +16,9 @@ HISTFILE=~/.histfile
 HISTSIZE=10000
 SAVEHIST=10000
 
-# set defauld editor 
-export EDITOR=vim
+# set environment variables
+export EDITOR=/bin/vim
+export LTTY=$(tty | awk '{split($1, r, "/"); print r[4]+1}')
 
 #autoload -U colors && colors
 
@@ -34,8 +35,8 @@ fi
 
 # greetings
 # if neofetch not installed run command line greetings
-if [ -f /usr/bin/neofetch ]; then
-        neofetch
-else
+#if [ -f /usr/bin/neofetch ]; then
+#        neofetch
+#else
         echo $USER@$HOST  $(uname -srm) $(lsb_release -rcs)
-fi
+#fi
