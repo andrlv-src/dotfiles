@@ -6,7 +6,7 @@ alias :q='exit'
 alias ls='ls --color=auto'
 alias la='ls -a'
 alias li='ls -li'
-alias ll='ls -alF'
+alias ll='ls -alFoh'
 alias l='ls -CF'
 alias %=''
 
