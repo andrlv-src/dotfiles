@@ -19,6 +19,9 @@ alias installed-save='echo $(date +"%d.%m.%Y") > installed.lst; installed >> ins
 # vim aliases for easy edit configs
 alias via='vim ~/.zsh/aliases'
 alias viz='vim ~/.zshrc'
-alias allist='cat ~/.zsh/aliases'
+alias alst='cat ~/.zsh/aliases'
 
 alias grep='grep --color=auto'
+
+#common aliases
+alias reload='source .zshrc'
