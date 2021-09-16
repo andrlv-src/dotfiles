@@ -3,10 +3,11 @@
 alias rr='ranger'
 # console aliases
 alias :q='exit'
+alias cal='cal -m'
 alias ls='ls --color=auto'
 alias la='ls -a'
 alias li='ls -li'
-alias ll='ls -alFoh'
+alias ll='ls -alFohv'
 alias l='ls -CF'
 alias %=''
 
@@ -24,4 +25,5 @@ alias alst='cat ~/.zsh/aliases'
 alias grep='grep --color=auto'
 
 #common aliases
-alias reload='source .zshrc'
+alias reload='source ~/.zshrc'
+alias disk="sudo fdisk -l | grep '^Disk /dev/*'"
