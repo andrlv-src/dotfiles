@@ -21,6 +21,7 @@ Plugin 'whatyouhide/vim-gotham'
 Plugin 'lifepillar/vim-solarized8'
 Plugin 'NLKNguyen/papercolor-theme'
 Plugin 'gruvbox-community/gruvbox'
+Plugin 'fxn/vim-monochrome'
 
 " Autocomplete plugin
 Plugin 'vim-scripts/AutoComplPop'
@@ -105,17 +106,18 @@ if (has("termguicolors"))
         set termguicolors
 endif
 
-colorscheme gruvbox
+colorscheme solarized8
+"colorscheme monochrome
 set background=dark
-hi Normal guibg=NONE ctermbg=NONE
+"hi Normal guibg=NONE ctermbg=NONE
 
 let g:airline_theme='archery'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 
-" let g:airline_theme='papercolor'
-" AirlineTheme base16_gruvbox_dark_hard
-" ArilineTheme base16_codeschool
+"let g:airline_theme='papercolor'
+"AirlineTheme base16_gruvbox_dark_hard
+"ArilineTheme base16_codeschool
 
 " -------------------------------------------------------
 " Custom status line

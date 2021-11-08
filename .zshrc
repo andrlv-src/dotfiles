@@ -1,6 +1,16 @@
+#################################################
+#                                               #
+# If in system doesn't installed configuration  #
+# Firstly need to run:                          #
+# pacman -S manjaro-zsh-config                  #
+# pacman -S zsh-syntax-highlighting             #
+# pacman -S zsh-history-substring-search        #
+#                                               #
+#################################################
+
 # Source manjaro-zsh-configuration
 if [[ -e /usr/share/zsh/manjaro-zsh-config ]]; then
-  source /usr/share/zsh/manjaro-zsh-config
+        source /usr/share/zsh/manjaro-zsh-config
 fi
 
 # Use manjaro zsh prompt
@@ -20,7 +30,7 @@ SAVEHIST=10000
 export EDITOR=/bin/vim
 export LTTY=$(tty | awk '{split($1, r, "/"); print r[4]+1}')
 
-#autoload -U colors && colors
+# autoload -U colors && colors
 
 # custom prompt
 PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
@@ -40,3 +50,7 @@ fi
 #else
         echo $USER@$HOST  $(uname -srm) $(lsb_release -rcs)
 #fi
+
+# swap capslock to control
+setxkbmap -option "ctrl:nocaps"
+
