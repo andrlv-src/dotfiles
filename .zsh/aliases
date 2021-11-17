@@ -26,5 +26,7 @@ alias grep='grep --color=auto'
 
 #common aliases
 alias reload='source ~/.zshrc'
-alias disk="sudo fdisk -l | grep '^Disk /dev/*'"
+alias dsk="sudo fdisk -l | grep '^Disk /dev/*'"
 alias doc="cd ~/Documents && ll"
+alias wrk="cd ~/Documents/workspace/ && ll"
+
